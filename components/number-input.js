@@ -28,7 +28,7 @@ const NumberInput = ({ value, setValue }) => {
         defaultValue={value}
       />
       <button
-        className="border border-solid border-lime-300 text-white w-8 hover:bg-gradient-to-tr from-lime-300 to-yellow-300 hover:text-black"
+        className="border border-solid border-lime-300 text-white w-8 hover:bg-gradient-to-tr from-lime-400 via-lime-300 to-yellow-300 hover:text-black"
         onClick={increment}
       >
         +

@@ -6,14 +6,14 @@ const InputCard = ({}) => {
   const [value, setValue] = useState(1);
 
   return (
-    <div className="w-full h-24 flex flex-col justify-between">
-      <div className="flex text-xl font-mono">
+    <div className="w-screen h-28 flex flex-col justify-between items-center px-8 md:w-4/5 md:h-32 lg:w-3/5 xl:h-36 2xl:h-40">
+      <div className="flex text-lg font-mono xs:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl">
         Verify <NumberInput value={value} setValue={setValue} /> blocks
       </div>
       <Link href={`/results/${value}#results`}>
         <button
           type="submit"
-          className="w-1/3 px-1 py-2 border border-solid border-lime-300 font-mono text-black text-lg font-bold bg-gradient-to-tr  from-lime-300 to-yellow-300"
+          className="w-full py-2 font-mono text-black text-lg font-bold bg-gradient-to-tr from-lime-400 via-lime-300 to-yellow-300 hover:opacity-80 transition-opacity md:w-4/5 md:py-3 lg:w-3/5 2xl:py-4 2xl:text-xl 2xl:w-2/5"
         >
           Go
         </button>
