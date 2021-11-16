@@ -1,3 +1,6 @@
+const WORDS_PER_SENTENCE = 20;
+const WORDS_PER_SENTENCE_STD = 4.5;
+
 const blockchainVocab = [
   "account",
   "address",
@@ -191,9 +194,6 @@ const shuffleVocabArray = (arr) => {
 
 shuffleVocabArray(cryptoLoremList);
 const generatorVocab = shuffleVocabArray(cryptoLoremList);
-
-const WORDS_PER_SENTENCE = 25;
-const WORDS_PER_SENTENCE_STD = 4.5;
 
 const randomGauss = (std) => {
   let r = 0;

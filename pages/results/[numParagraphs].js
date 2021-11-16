@@ -1,13 +1,29 @@
 import { useRef } from "react";
-import Link from "next/link";
 import generateBlocks from "../../helpers/generate-text";
+import Footer from "../../components/layout/footer";
+import ResultsHeader from "../../components/layout/results-header";
 
 const BlocksumResults = ({ paragraphs }) => {
+  //* Set ref for results section to be accessed by copy to clipboard function and links
   const resultsRef = useRef();
+  //* Click handler for copy button to copy all text to clipboard
+  const handleClick = (text) => {
+    return navigator.clipboard.writeText(text);
+  };
+  //* Set boolean prop for when to show scroll-to-bottom button in results header
+  const hiddenMobile = paragraphs.length < 3 ? true : false;
+  const hiddenDesktop = paragraphs.length < 15 ? true : false;
 
   return (
-    <section id="results" className="h-content bg-white p-6 flex flex-col">
-      <div className="" ref={resultsRef}>
+    <section
+      id="results"
+      className="flex flex-col h-content bg-white py-6 px-8 md:px-32  lg:text-lg xl:px-48 xl:text-2xl 2xl:px-64 2xl:text-2xl"
+    >
+      <ResultsHeader
+        hiddenMobile={hiddenMobile}
+        hiddenDesktop={hiddenDesktop}
+      />
+      <div className="mb-8" ref={resultsRef}>
         {paragraphs.map((paragraph, idx) => (
           <p key={idx} className="mb-8">
             {paragraph}
@@ -15,12 +31,10 @@ const BlocksumResults = ({ paragraphs }) => {
         ))}
       </div>
 
-      <div className="flex items-center justify-between w-full">
+      <Footer>
         <button
-          onClick={() =>
-            navigator.clipboard.writeText(resultsRef.current.innerText)
-          }
-          className="flex items-center justify-between w-1/3 h-12 px-2 border border-black border-solid text-black font-mono text-lg font-bold hover:bg-black hover:text-white transition-colors"
+          onClick={() => handleClick(resultsRef.current.innerText)}
+          className="flex items-center justify-between w-1/2 xs:w-1/3 max-w-[8rem] h-12 px-3 border border-black border-solid text-black font-mono text-lg font-bold hover:bg-black hover:text-white transition-colors"
         >
           Copy
           <svg
@@ -38,25 +52,7 @@ const BlocksumResults = ({ paragraphs }) => {
             />
           </svg>
         </button>
-        <Link href="#landing">
-          <button className="flex justify-center items-center h-12 w-12 bg-black text-lime-300 hover:opacity-80 transition-opacity">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 10l7-7m0 0l7 7m-7-7v18"
-              />
-            </svg>
-          </button>
-        </Link>
-      </div>
+      </Footer>
     </section>
   );
 };
