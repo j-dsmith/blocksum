@@ -11,12 +11,7 @@ module.exports = {
       gray: colors.trueGray,
       transparent: colors.transparent,
       lime: colors.lime,
-      green: colors.green,
-      blue: colors.blue,
       yellow: colors.yellow,
-      purple: colors.purple,
-      red: colors.red,
-      pink: colors.pink,
     },
     screens: {
       xs: "375px",
