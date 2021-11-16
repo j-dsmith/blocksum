@@ -11,18 +11,14 @@ const BlocksumResults = ({ paragraphs }) => {
     return navigator.clipboard.writeText(text);
   };
   //* Set boolean prop for when to show scroll-to-bottom button in results header
-  const hiddenMobile = paragraphs.length < 3 ? true : false;
-  const hiddenDesktop = paragraphs.length < 15 ? true : false;
+  const hidden = paragraphs.length < 8 ? true : false;
 
   return (
     <section
       id="results"
       className="flex flex-col h-content bg-white py-6 px-8 md:px-32  lg:text-lg xl:px-48 xl:text-2xl 2xl:px-64 2xl:text-2xl"
     >
-      <ResultsHeader
-        hiddenMobile={hiddenMobile}
-        hiddenDesktop={hiddenDesktop}
-      />
+      <ResultsHeader hidden={hidden} />
       <div className="mb-8" ref={resultsRef}>
         {paragraphs.map((paragraph, idx) => (
           <p key={idx} className="mb-8">

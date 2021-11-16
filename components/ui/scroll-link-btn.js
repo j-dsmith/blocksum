@@ -1,12 +1,7 @@
 import Link from "next/link";
 
-const ScrollLinkBtn = ({
-  href,
-  scrollDirection,
-  hiddenMobile,
-  hiddenDesktop,
-}) => {
-  if (hiddenMobile || hiddenDesktop) {
+const ScrollLinkBtn = ({ href, scrollDirection, hidden }) => {
+  if (hidden) {
     return <div />;
   }
   return (
