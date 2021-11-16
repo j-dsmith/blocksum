@@ -15,7 +15,7 @@ const CounterBtn = ({ calcType, value, setValue }) => {
 
   return (
     <button
-      className="border border-solid border-lime-300 text-white w-8 xl:w-12 hover:bg-gradient-to-tr  from-lime-300 to-yellow-300 hover:text-black"
+      className="border-r border-l border-solid border-lime-300 text-white w-8 xl:w-12 hover:bg-gradient-to-tr  from-lime-300 to-yellow-300 hover:text-black"
       onClick={calcType === "increment" ? increment : decrement}
     >
       {calcType === "increment" ? "+" : "–"}
