@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const Header = () => {
   return (
@@ -7,7 +7,14 @@ const Header = () => {
       className="w-screen h-1/6 bg-black flex items-center justify-center"
     >
       <div className="w-2/3 md:w-1/3 lg:w-1/4">
-        <Image src="/logo.png" height="409" width="2445" className="" />
+        <Image
+          src="/logo.png"
+          height="409"
+          width="2445"
+          className=""
+          priority="true"
+          loading="eager"
+        />
       </div>
     </header>
   );

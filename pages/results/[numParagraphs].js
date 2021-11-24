@@ -1,7 +1,7 @@
-import { useRef } from "react";
-import generateBlocks from "../../helpers/generate-text";
-import Footer from "../../components/layout/footer";
-import ResultsHeader from "../../components/layout/results-header";
+import { useRef } from 'react';
+import generateBlocks from '../../helpers/generate-text';
+import Footer from '../../components/layout/footer';
+import ResultsHeader from '../../components/layout/results-header';
 
 const BlocksumResults = ({ paragraphs }) => {
   //* Set ref for results section to be accessed by copy to clipboard function and links
