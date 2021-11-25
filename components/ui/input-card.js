@@ -1,6 +1,6 @@
-import { useState } from "react";
-import Link from "next/link";
-import NumberInput from "./number-input";
+import { useState } from 'react';
+import Link from 'next/link';
+import NumberInput from './number-input';
 
 const InputCard = ({}) => {
   const [value, setValue] = useState(1);
@@ -8,7 +8,7 @@ const InputCard = ({}) => {
   return (
     <div className="w-screen h-28 mb-8 flex flex-col justify-between items-center px-8 md:w-4/5 md:h-32 lg:w-4/5 xl:h-36 2xl:h-40">
       <div className="flex text-lg font-mono xs:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl">
-        Verify <NumberInput value={value} setValue={setValue} /> blocks
+        Generate <NumberInput value={value} setValue={setValue} /> block(s)
       </div>
       <Link href={`/results/${value}#results`}>
         <button

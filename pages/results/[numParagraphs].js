@@ -6,7 +6,7 @@ import ResultsHeader from '../../components/layout/results-header';
 const BlocksumResults = ({ paragraphs }) => {
   //* Set ref for results section to be accessed by copy to clipboard function and links
   const resultsRef = useRef();
-  //* Click handler for copy button to copy all text to clipboard
+  //* Click handler to copy all text to clipboard
   const handleClick = (text) => {
     return navigator.clipboard.writeText(text);
   };
