@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import Link from 'next/link';
 import ResultsContext from '../../store/results-context';
 import generateBlocks from '../../helpers/generate-text';
 import NumberInput from './number-input';
@@ -20,14 +21,15 @@ const InputCard = ({ value, setValue, toggleResults }) => {
       <div className="flex text-md font-mono xs:text-lg md:text-2xl xl:text-3xl 2xl:text-4xl">
         Generate <NumberInput value={value} setValue={setValue} /> block(s)
       </div>
-
-      <button
-        type="submit"
-        className="w-full py-2 font-mono text-black text-lg font-bold bg-gradient-to-tr from-lime-400 via-lime-300 to-yellow-300 hover:opacity-80 transition-opacity md:w-4/5 md:py-3 lg:w-2/5 2xl:py-4 2xl:text-2xl 2xl:w-1/3"
-        onClick={handleClick}
-      >
-        Go
-      </button>
+      <Link href="#results">
+        <button
+          type="submit"
+          className="w-full py-2 font-mono text-black text-lg font-bold bg-gradient-to-tr from-lime-400 via-lime-300 to-yellow-300 hover:opacity-80 transition-opacity md:w-4/5 md:py-3 lg:w-2/5 2xl:py-4 2xl:text-2xl 2xl:w-1/3"
+          onClick={handleClick}
+        >
+          Go
+        </button>
+      </Link>
     </div>
   );
 };

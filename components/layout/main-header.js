@@ -13,7 +13,6 @@ const Header = () => {
           width="2445"
           className=""
           priority="true"
-          loading="eager"
         />
       </div>
     </header>

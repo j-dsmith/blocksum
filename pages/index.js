@@ -9,7 +9,7 @@ export default function Home() {
   const [showResults, toggleResults] = useState(false);
 
   return (
-    <main className="h-screen w-screen p-0 m-0 overflow-hidden">
+    <main className="h-screen w-screen p-0 m-0">
       <section className="flex flex-col h-screen bg-black box-border overflow-hidden relative md:justify-center md:w-screen">
         <Header />
         <div className="flex flex-col justify-evenly items-center text-white h-5/6 w-screen px-6 mt-auto md:px-8">

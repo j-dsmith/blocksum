@@ -24,7 +24,7 @@ const ScrollLinkBtn = ({ href, scrollDirection, hidden }) => {
           </svg>
         </button>
       ) : (
-        <button className="flex justify-center items-center h-10 w-10 bg-black text-lime-300 hover:opacity-80 transition-opacity">
+        <button className="flex justify-center items-center h-10 w-10 xs:h-12 xs:w-12 bg-black text-lime-300 hover:opacity-80 transition-opacity">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
