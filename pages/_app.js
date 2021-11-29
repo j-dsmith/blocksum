@@ -1,11 +1,11 @@
-import Layout from "../components/layout/";
-import "tailwindcss/tailwind.css";
+import 'tailwindcss/tailwind.css';
+import { ResultsContextProvider } from '../store/results-context';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <ResultsContextProvider>
       <Component {...pageProps} />
-    </Layout>
+    </ResultsContextProvider>
   );
 }
 
